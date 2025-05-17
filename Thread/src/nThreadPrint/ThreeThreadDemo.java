@@ -1,4 +1,5 @@
-import java.util.HashMap;
+package nThreadPrint;
+
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

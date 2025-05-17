@@ -1,9 +1,9 @@
-//import java.util.ArrayList;
+package nThreadPrint;//import java.util.ArrayList;
 //import java.util.List;
 //import java.util.concurrent.locks.Condition;
 //import java.util.concurrent.locks.ReentrantLock;
 //
-//public class ProducerAndComsumer {
+//public class nThreadPrint.ProducerAndComsumer {
 //    private static  final ReentrantLock lock = new ReentrantLock();
 //    private  static final Condition noEmpty = lock.newCondition();
 //    private  static final Condition noFull = lock.newCondition();

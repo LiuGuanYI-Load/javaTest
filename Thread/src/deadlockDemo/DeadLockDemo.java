@@ -1,3 +1,5 @@
+package deadlockDemo;
+
 public class DeadLockDemo {
     static String a="lock1";
     static String b="lock2";

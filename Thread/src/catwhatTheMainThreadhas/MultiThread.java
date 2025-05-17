@@ -1,6 +1,4 @@
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadInfo;
-import java.lang.management.ThreadMXBean;
+package catwhatTheMainThreadhas;
 
 public class MultiThread{
     public static void main(String[] args) throws  InterruptedException{
