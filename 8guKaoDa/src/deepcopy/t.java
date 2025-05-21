@@ -11,8 +11,14 @@ public class t {
         cloneTest cd2 =(cloneTest) cd.clone();
         System.out.println(cd == cd2);
         System.out.println(cd.b == cd2.b);
-        cd.b= "7";
-        System.out.println(cd.b == cd2.b);
+
+        cloneTest2 c1 = new cloneTest2(1,new cloneTest(1,"2"));
+        cloneTest2 c2 = (cloneTest2) c1.clone();
+        System.out.println(c1.b.a);
+        System.out.println(c2.b.a);
+        c1.b.a = 4;
+        System.out.println(c1.b.a);
+        System.out.println(c2.b.a);
 
         System.out.println("-------------这是深拷贝-------------");
         cloneDeep cloneDeep =   new cloneDeep(1,"deepclone");
@@ -73,6 +79,20 @@ class cloneTest implements Cloneable{
     public int a ;
     public String b;
     public cloneTest(int a, String b){
+        this.a = a;
+        this.b = b;
+    }
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+//        @IntrinsicCandidate
+//        protected native Object clone() throws CloneNotSupportedException;
+    }
+}
+class cloneTest2 implements Cloneable{
+    public int a ;
+    public cloneTest b;
+    public cloneTest2(int a, cloneTest b){
         this.a = a;
         this.b = b;
     }
