@@ -5,13 +5,15 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
+import io.netty.util.concurrent.FastThreadLocal;
+import io.netty.util.concurrent.FastThreadLocalThread;
 
 public class NettyServer {
     public static void main(String[] args) throws InterruptedException {
         // 创建两个事件循环组：一个处理接受连接，一个处理 I/O 事件
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-
+        FastThreadLocalThread
         try {
             // 配置服务器
             ServerBootstrap bootstrap = new ServerBootstrap();
